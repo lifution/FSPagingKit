@@ -61,9 +61,9 @@
 		358BF0DB7CD2478F9799880F19E73DE3 /* FSPagingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPagingViewController.swift; sourceTree = "<group>"; };
 		56C8348CDD257BC5E3E8B7C6DDFCF3FE /* FSPagingKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSPagingKit.debug.xcconfig; sourceTree = "<group>"; };
 		62D2947E6634D7039404E1DCECC4F326 /* FSPagingKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FSPagingKit.modulemap; sourceTree = "<group>"; };
-		6AA55635FB3C91909E53682248DC36FB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6AA55635FB3C91909E53682248DC36FB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		6AB6E97F72EA55B770301503EE03556D /* FSPageTitlesIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPageTitlesIndicatorView.swift; sourceTree = "<group>"; };
-		6BEC3FE8DA895355894239732D2F7068 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6BEC3FE8DA895355894239732D2F7068 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		6D2111DEA4D88F5381B3CFE82086F291 /* FSPageCrossfadeTextTitleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPageCrossfadeTextTitleView.swift; sourceTree = "<group>"; };
 		7C337A9FCA284E49BB08F825CF608E38 /* Pods-FSPagingKit_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-FSPagingKit_Example"; path = Pods_FSPagingKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEA84A1FFADA4F1F9F43C408326C297 /* FSPagingViewControllerPageScrollable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPagingViewControllerPageScrollable.swift; sourceTree = "<group>"; };
@@ -72,12 +72,12 @@
 		910CA59B3BE05165931E547385CD0AC0 /* Pods-FSPagingKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FSPagingKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		91BE1613A623B696B4A94BC14A02E48C /* FSPageTitlesView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPageTitlesView.swift; sourceTree = "<group>"; };
 		94F516A853401C46FD0C6485AD22423F /* _FSPagingManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = _FSPagingManager.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F7D9560FDDDF06D12D02374362C4C72 /* FSPageTitleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPageTitleView.swift; sourceTree = "<group>"; };
 		9F878222CAC1334442A07E827274970F /* FSPagingKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FSPagingKit; path = FSPagingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A612E392337CA670D41E1D0F3487DFB0 /* FSPagingViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPagingViewControllerDelegate.swift; sourceTree = "<group>"; };
 		AFBF53BFB4A40D672284C8B0E86BBEA8 /* FSPageTitle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPageTitle.swift; sourceTree = "<group>"; };
-		B9CC42BB0CDB25E89455CABB3408D611 /* FSPagingKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = FSPagingKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B9CC42BB0CDB25E89455CABB3408D611 /* FSPagingKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FSPagingKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BE7CB228E25A9821EE03FB4D6D1A29D2 /* FSPagingConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPagingConfig.swift; sourceTree = "<group>"; };
 		BFA4FBA185B8D34AEA0FFF2AEE9A8849 /* FSPageViewControllerDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPageViewControllerDataSource.swift; sourceTree = "<group>"; };
 		C0189D31E3D10559C7C7750F7600E594 /* FSPageViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPageViewControllerDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +126,7 @@
 				94F516A853401C46FD0C6485AD22423F /* _FSPagingManager.swift */,
 				EE216BA375C9B03C28E9EF5D49787037 /* _FSPagingNestedScrollView.swift */,
 			);
+			name = Private;
 			path = Private;
 			sourceTree = "<group>";
 		};
@@ -154,6 +155,7 @@
 			children = (
 				84AF5BBF7F1BA36B85226A09319BBE17 /* UIViewController+Paging.swift */,
 			);
+			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -163,6 +165,7 @@
 				9F7D9560FDDDF06D12D02374362C4C72 /* FSPageTitleView.swift */,
 				DF959DE36831408C4732C343956B1299 /* TextTitleView */,
 			);
+			name = FSPageTitleView;
 			path = FSPageTitleView;
 			sourceTree = "<group>";
 		};
@@ -217,6 +220,7 @@
 			children = (
 				BE7CB228E25A9821EE03FB4D6D1A29D2 /* FSPagingConfig.swift */,
 			);
+			name = FSPagingConfig;
 			path = FSPagingConfig;
 			sourceTree = "<group>";
 		};
@@ -225,6 +229,7 @@
 			children = (
 				6AB6E97F72EA55B770301503EE03556D /* FSPageTitlesIndicatorView.swift */,
 			);
+			name = FSPageTitlesIndicatorView;
 			path = FSPageTitlesIndicatorView;
 			sourceTree = "<group>";
 		};
@@ -295,9 +300,10 @@
 		DF959DE36831408C4732C343956B1299 /* TextTitleView */ = {
 			isa = PBXGroup;
 			children = (
-				24E319FD7D4FD1272703E4EF358A5A9B /* FSPageScaleTextTitleView.swift */,
 				6D2111DEA4D88F5381B3CFE82086F291 /* FSPageCrossfadeTextTitleView.swift */,
+				24E319FD7D4FD1272703E4EF358A5A9B /* FSPageScaleTextTitleView.swift */,
 			);
+			name = TextTitleView;
 			path = TextTitleView;
 			sourceTree = "<group>";
 		};
@@ -319,9 +325,10 @@
 		F114A0FF85497DE9DAAE90D0545A8278 /* FSPageTitle */ = {
 			isa = PBXGroup;
 			children = (
-				AFBF53BFB4A40D672284C8B0E86BBEA8 /* FSPageTitle.swift */,
 				CD1B401C44078A16A2C7C675D15458C1 /* FSPageTextTitle.swift */,
+				AFBF53BFB4A40D672284C8B0E86BBEA8 /* FSPageTitle.swift */,
 			);
+			name = FSPageTitle;
 			path = FSPageTitle;
 			sourceTree = "<group>";
 		};
@@ -717,7 +724,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

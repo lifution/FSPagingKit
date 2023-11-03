@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FSPagingKit: 6eb440b67f3c86615a85fbfa6c7226a2c4390dcb
+  FSPagingKit: 19d24ff4ba76c3cfb0ea7382f8488f84bcc60e6a
 
 PODFILE CHECKSUM: 5ff72d886fd7eabd7caf71c46401adc895c66eb7
 

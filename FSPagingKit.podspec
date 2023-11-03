@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license   = { :type => 'MIT', :file => 'LICENSE' }
   s.author    = 'Sheng'
   s.source    = {
-    :git => 'https://github.com/Sheng/FSPagingKit.git',
+    :git => 'git@github.com:lifution/FSPagingKit.git',
     :tag => s.version.to_s
   }
   

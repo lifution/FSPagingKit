@@ -9,7 +9,7 @@
   },
   "authors": "Sheng",
   "source": {
-    "git": "https://github.com/Sheng/FSPagingKit.git",
+    "git": "git@github.com:lifution/FSPagingKit.git",
     "tag": "1.0.0"
   },
   "swift_versions": "5",
