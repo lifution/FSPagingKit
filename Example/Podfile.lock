@@ -1,0 +1,16 @@
+PODS:
+  - FSPagingKit (1.0.0)
+
+DEPENDENCIES:
+  - FSPagingKit (from `../`)
+
+EXTERNAL SOURCES:
+  FSPagingKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FSPagingKit: d1cfa1b91b2fe76cdd2faf1a1c8f2734bc9553ab
+
+PODFILE CHECKSUM: 5ff72d886fd7eabd7caf71c46401adc895c66eb7
+
+COCOAPODS: 1.13.0

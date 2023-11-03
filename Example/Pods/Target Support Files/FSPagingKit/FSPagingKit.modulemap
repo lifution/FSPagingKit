@@ -1,0 +1,6 @@
+framework module FSPagingKit {
+  umbrella header "FSPagingKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
