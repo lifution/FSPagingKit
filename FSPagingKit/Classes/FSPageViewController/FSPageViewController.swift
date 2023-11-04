@@ -2,7 +2,7 @@
 //  FSPageViewController.swift
 //  FSPagingKit
 //
-//  Created by Sheng on 2023/11/13.
+//  Created by Sheng on 2023/11/3.
 //  Copyright © 2023 Sheng. All rights reserved.
 //
 
@@ -16,7 +16,7 @@ import Foundation
 ///   一个 FSPageViewController 并已做了常规的封装，比如显示 titlesView、联动等功能，
 ///   API 相对于 FSPageViewController 也更适合用在平常开发中。
 ///
-/// - 如果你需要一个更复杂、更自由的 PageViewController，则可以继承 FSPageViewController
+/// - 如果你需要一个更复杂、更自由的 PageViewController，则可以使用 FSPageViewController
 ///   做自己的需求封装。
 ///
 open class FSPageViewController: UIViewController {
