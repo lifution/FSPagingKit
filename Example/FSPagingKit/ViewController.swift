@@ -63,6 +63,7 @@ class ViewController: FSPagingViewController {
         do {
             headerHeight = titlesView.frame.maxY
             stickyHeight = titlesView.frame.height + view.safeAreaInsets.top
+//            contentInset.bottom = 100.0
         }
     }
 }

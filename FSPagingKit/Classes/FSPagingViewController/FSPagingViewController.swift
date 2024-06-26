@@ -41,6 +41,16 @@ open class FSPagingViewController: UIViewController {
         set { manager.stickyHeight = newValue }
     }
     
+    /// 内容偏移
+    /// page 内容是铺满整个 view controller，但有时候会有需求把 page 偏移一部分，比如
+    /// navigation bar 或 tab bar。
+    /// 用法类似 UIScrollView 的 contentInset。
+    /// 默认为 .zero
+    public var contentInset: UIEdgeInsets {
+        get { return manager.contentInset }
+        set { manager.contentInset = newValue }
+    }
+    
     /// 是否为循环滑动，默认为 false。
     public var isInfinite: Bool {
         get { return manager.isInfinite }

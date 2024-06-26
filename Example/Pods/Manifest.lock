@@ -1,5 +1,5 @@
 PODS:
-  - FSPagingKit (1.0.0)
+  - FSPagingKit (1.0.1)
 
 DEPENDENCIES:
   - FSPagingKit (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FSPagingKit: 19d24ff4ba76c3cfb0ea7382f8488f84bcc60e6a
+  FSPagingKit: 01aa27e05d1f2b3160aa94e6003fc949a00b5044
 
-PODFILE CHECKSUM: 5ff72d886fd7eabd7caf71c46401adc895c66eb7
+PODFILE CHECKSUM: 8d522288b1ce6f5f627bc09df41fef133a9a62d7
 
-COCOAPODS: 1.13.0
+COCOAPODS: 1.15.2

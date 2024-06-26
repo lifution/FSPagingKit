@@ -40,6 +40,14 @@ final class _FSPagingManager: NSObject {
         }
     }
     
+    var contentInset: UIEdgeInsets = .zero {
+        didSet {
+            if contentInset != oldValue {
+                p_setNeedsLayoutUpdate()
+            }
+        }
+    }
+    
     var onParentDidScroll: ((CGPoint) -> Void)?
     
     var shouldRecognizeSimultaneously: ((_ gestureRecognizer: UIGestureRecognizer, _ otherGestureRecognizer: UIGestureRecognizer) -> Bool)?
@@ -278,10 +286,11 @@ private extension _FSPagingManager {
             }
         }
         do {
-            let y = headerHeight
-            let w = viewSize.width
-            let h = viewSize.height - headerHeight + (config.isSticky ? (headerHeight - stickyHeight) : 0.0)
-            pageView.frame = .init(x: 0.0, y: y, width: w, height: h)
+            let x = contentInset.left
+            let y = contentInset.top + headerHeight
+            let w = viewSize.width - contentInset.left - contentInset.right
+            let h = viewSize.height - contentInset.top - contentInset.bottom - headerHeight + (config.isSticky ? (headerHeight - stickyHeight) : 0.0)
+            pageView.frame = .init(x: x, y: y, width: w, height: h)
         }
     }
     

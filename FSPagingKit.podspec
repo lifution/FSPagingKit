@@ -1,13 +1,13 @@
 
 Pod::Spec.new do |s|
   s.name      = 'FSPagingKit'
-  s.version   = '1.0.0'
+  s.version   = '1.0.1'
   s.summary   = 'A container view controller that manages navigation between pages of content, where a child view controller manages each page. (like UIKit/UIPageViewController)'
   s.homepage  = 'https://github.com/lifution/FSPagingKit'
   s.license   = { :type => 'MIT', :file => 'LICENSE' }
   s.author    = 'Sheng'
   s.source    = {
-    :git => 'git@github.com:lifution/FSPagingKit.git',
+    :git => 'https://github.com/lifution/FSPagingKit.git',
     :tag => s.version.to_s
   }
   
