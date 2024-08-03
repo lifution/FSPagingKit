@@ -15,7 +15,7 @@ public extension FSPagingKitWrapper where Base: UIViewController {
     /// - Note:
     ///   - 该方法为 FSPagingViewController 类特供，
     ///     仅当当前控制器是在 FSPagingViewController 容器下时该方法才有效（当前控制器就是 FSPagingViewController 时同样有效）。
-    ///   - 当当前控制器一些与 FSPagingViewController 相关的参数更新后可调用该方法让 FSPagingViewController 进入更新状态。
+    ///   - 当当前控制器一些与 FSPagingViewController 相关的参数更新后可调用该方法让 FSPagingViewController 进入更新操作。
     ///
     func setNeedsPageScrollableUpdate() {
         if let pagingVC = base.pagingViewController {
