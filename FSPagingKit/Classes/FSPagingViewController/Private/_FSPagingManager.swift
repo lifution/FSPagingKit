@@ -566,6 +566,13 @@ extension _FSPagingManager: FSPageViewControllerGestureRecognizerDelegate {
             {
                 return true
             }
+            // `FSFullscreenPopGestureRecognizerDelegate` 全屏返回手势。
+            if let delegate = otherGestureRecognizer.delegate,
+               let cls = NSClassFromString("FSFullscreenPopGestureRecognizerDelegate"),
+               delegate.isKind(of: cls.self)
+            {
+                return true
+            }
             // UINavigationController 的 pop 手势。
             if otherGestureRecognizer.state == .began,
                let view = otherGestureRecognizer.view,
@@ -602,6 +609,13 @@ extension _FSPagingManager: FSPageViewControllerGestureRecognizerDelegate {
         // `FDFullscreenPopGestureRecognizer` 全屏返回手势。
         if let delegate = otherGestureRecognizer.delegate,
            let cls = NSClassFromString("_FDFullscreenPopGestureRecognizerDelegate"),
+           delegate.isKind(of: cls.self)
+        {
+            return true
+        }
+        // `FSFullscreenPopGestureRecognizerDelegate` 全屏返回手势。
+        if let delegate = otherGestureRecognizer.delegate,
+           let cls = NSClassFromString("FSFullscreenPopGestureRecognizerDelegate"),
            delegate.isKind(of: cls.self)
         {
             return true
