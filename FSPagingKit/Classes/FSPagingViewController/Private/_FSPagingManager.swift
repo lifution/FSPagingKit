@@ -206,7 +206,7 @@ private extension _FSPagingManager {
     }
     
     /// 矫正 contentOffset，
-    /// 只有当 chyildScrollView 有效时才会进入该方法。
+    /// 只有当 childScrollView 有效时才会进入该方法。
     func p_correctContentOffset() {
         
         guard let childScrollView = childScrollView else {
