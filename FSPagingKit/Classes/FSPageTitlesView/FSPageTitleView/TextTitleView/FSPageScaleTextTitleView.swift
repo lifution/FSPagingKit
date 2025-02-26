@@ -73,7 +73,7 @@ final class FSPageScaleTextTitleView: FSPageTitleView {
         }
         textLabel.attributedText = title.attributedText(progress)
         do {
-            let minScale: CGFloat = 0.7
+            let minScale: CGFloat = 0.9
             if progress <= 0.0 {
                 textLabel.transform = .init(scaleX: minScale, y: minScale)
             } else if progress >= 1.0 {

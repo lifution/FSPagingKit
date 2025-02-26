@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import Combine
 
 final class _FSPagingNestedScrollView: UIScrollView {
     
-    // MARK: Properties/Internal
-    
     var simultaneouslyGestureRecognizers = [UIGestureRecognizer]()
+    let backgroundColorPublisher = PassthroughSubject<UIColor?, Never>()
+    
+    override var backgroundColor: UIColor? {
+        didSet {
+            backgroundColorPublisher.send(backgroundColor)
+        }
+    }
     
     // MARK: Initialization
     

@@ -7,40 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12A0EB84FA1F3C3620FBBC5E8C1DFDCC /* _FSPagingNestedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE216BA375C9B03C28E9EF5D49787037 /* _FSPagingNestedScrollView.swift */; };
-		2AB4115AF056811388219209035E0E68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		32B889EFD4072A93312F6198CA4BCF2D /* FSPagingViewControllerPageScrollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA84A1FFADA4F1F9F43C408326C297 /* FSPagingViewControllerPageScrollable.swift */; };
-		3514ACC19705A01338C2C72969FBCD97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		361DD62B6B2F15D889BC05F8859C38E9 /* _FSPagingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F516A853401C46FD0C6485AD22423F /* _FSPagingManager.swift */; };
-		51303DF2129CE6AE2A16F9F57FA07B27 /* FSPagingViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A612E392337CA670D41E1D0F3487DFB0 /* FSPagingViewControllerDelegate.swift */; };
-		56EA3CE28D3B42B1DC0E306EE7474075 /* FSPageTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBF53BFB4A40D672284C8B0E86BBEA8 /* FSPageTitle.swift */; };
-		57D4C95A2472C946CFC9A770819FC6FD /* FSPageViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4FBA185B8D34AEA0FFF2AEE9A8849 /* FSPageViewControllerDataSource.swift */; };
-		60F79023D4CB3C79068588EC1D7AEF66 /* FSPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D9560FDDDF06D12D02374362C4C72 /* FSPageTitleView.swift */; };
-		630C97F96A4D13477790843297055BE3 /* FSPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73609CAE7A87B345DACC30F99EF9357 /* FSPageViewController.swift */; };
-		65B713B194BD9763E62016AA289DE1EA /* _FSQueuingScrollViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C5F9BD2804DA5E1CDCD67298935DE /* _FSQueuingScrollViewDataSource.swift */; };
-		65DBDDB69559B522463A2A1FEB9CAFE7 /* UIViewController+Paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF5BBF7F1BA36B85226A09319BBE17 /* UIViewController+Paging.swift */; };
-		6E4A2C289FF07B032505E8DC1ED46D3D /* FSPageTitlesIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB6E97F72EA55B770301503EE03556D /* FSPageTitlesIndicatorView.swift */; };
-		742C23BF9F0517B6DBB9ED4AC674C801 /* FSPageCrossfadeTextTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2111DEA4D88F5381B3CFE82086F291 /* FSPageCrossfadeTextTitleView.swift */; };
-		7F04A299FA763E71ED953C3D8CE7EBD2 /* Pods-FSPagingKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9414559DDD1BF16DF7F96CD93EF2F10 /* Pods-FSPagingKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		902FE527B657CF6BDEA48347741E3FA8 /* FSPagingKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D89C5C17E63C827450BA04B2E8DCE4D3 /* FSPagingKit-dummy.m */; };
-		9D7F6642AF9FAB5B29B352F88F98CC5F /* _FSQueuingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20F75F90E911EEA072080029B1975E /* _FSQueuingScrollView.swift */; };
-		AC5BF0A3447DB431F1DD29D14AFDBAC6 /* FSPageViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0189D31E3D10559C7C7750F7600E594 /* FSPageViewControllerDelegate.swift */; };
-		AF8F00D2592259C431216C2411180EC6 /* FSPagingKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9D19E7A0ECBE9989AA4D1872B86161 /* FSPagingKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BAB39C833C7F452B8CCFB59C5DEA511D /* FSPageTitlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BE1613A623B696B4A94BC14A02E48C /* FSPageTitlesView.swift */; };
-		CCF19FAF3D4B906C20F21C2D652F4A42 /* FSPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358BF0DB7CD2478F9799880F19E73DE3 /* FSPagingViewController.swift */; };
-		CE274E42C8144E4B5E652C64794619E1 /* FSPageViewControllerGestureRecognizerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F819D0ADDEDE0A23B06E3911CB5AA15 /* FSPageViewControllerGestureRecognizerDelegate.swift */; };
-		CE853E0C167B6478BE792A88CE517574 /* Pods-FSPagingKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8A07DB7458D2F419D3CAC42210FA13 /* Pods-FSPagingKit_Example-dummy.m */; };
-		D51B8D33531C563F8B7F35095D513CC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
-		DFB1CD0FCBCCB91778CB4BE7C87B7F57 /* _FSQueuingScrollViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45789DD26B90883F6A000E6051BA66 /* _FSQueuingScrollViewDelegates.swift */; };
-		EA259AEB90FF6FF770374586DB4908AA /* FSPagingConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7CB228E25A9821EE03FB4D6D1A29D2 /* FSPagingConfig.swift */; };
-		EB6E8C34E38FD2189DEBA6C61CC8D94A /* FSPagingViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346E7BA7666CB095974C87935DB99F7 /* FSPagingViewControllerDataSource.swift */; };
-		F0E0168DAB406342F2373043056D9968 /* FSPageTextTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B401C44078A16A2C7C675D15458C1 /* FSPageTextTitle.swift */; };
-		F61B10038ADD011F44E8116EC4727645 /* FSPagingKitNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9154F85CF95547290EE0D9393F074 /* FSPagingKitNamespace.swift */; };
-		F887A88B06AD4F98BDAC1B2DF51D8656 /* FSPageScaleTextTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E319FD7D4FD1272703E4EF358A5A9B /* FSPageScaleTextTitleView.swift */; };
+		05807D61C25DDBBDFE041EB78845E75E /* Pods-FSPagingKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8A07DB7458D2F419D3CAC42210FA13 /* Pods-FSPagingKit_Example-dummy.m */; };
+		186795F31883A33C16C1577774F1B22D /* UIViewController+Paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF5BBF7F1BA36B85226A09319BBE17 /* UIViewController+Paging.swift */; };
+		22C3411B1A9D66E0F0574A753B325294 /* Pods-FSPagingKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9414559DDD1BF16DF7F96CD93EF2F10 /* Pods-FSPagingKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CE1F3EE430BC09E144B63A46FFF5FB4 /* FSPageCrossfadeTextTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2111DEA4D88F5381B3CFE82086F291 /* FSPageCrossfadeTextTitleView.swift */; };
+		2F3A10FF6046B975D2334487F2476B41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8193349D819536E58C58A34C1B7DF545 /* Foundation.framework */; };
+		37B02A1C1E956B7F0D6DB174771A0AB3 /* FSPagingViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346E7BA7666CB095974C87935DB99F7 /* FSPagingViewControllerDataSource.swift */; };
+		497182C459CC30FE7246E2332C65387C /* FSPagingViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A612E392337CA670D41E1D0F3487DFB0 /* FSPagingViewControllerDelegate.swift */; };
+		525D624781B273AAF74E6B15907D0C60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8193349D819536E58C58A34C1B7DF545 /* Foundation.framework */; };
+		66368F6D744F12F2140A7460680584F1 /* FSPageTitlesIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB6E97F72EA55B770301503EE03556D /* FSPageTitlesIndicatorView.swift */; };
+		69B1D2854988A956A2B555DCCA51D26C /* FSPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73609CAE7A87B345DACC30F99EF9357 /* FSPageViewController.swift */; };
+		6C6476DB89475BC5C7118353F79CB633 /* FSPageViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0189D31E3D10559C7C7750F7600E594 /* FSPageViewControllerDelegate.swift */; };
+		732B03B67AF828281E5BF21F68F22322 /* FSPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358BF0DB7CD2478F9799880F19E73DE3 /* FSPagingViewController.swift */; };
+		7518833B511B2552221E48205478E0E2 /* _FSPagingNestedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE216BA375C9B03C28E9EF5D49787037 /* _FSPagingNestedScrollView.swift */; };
+		7A70397FA7CE8D124FEEA7A5D6961EF7 /* FSPagingKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D89C5C17E63C827450BA04B2E8DCE4D3 /* FSPagingKit-dummy.m */; };
+		7F30F2040234F4454375332398A10621 /* _FSQueuingScrollViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45789DD26B90883F6A000E6051BA66 /* _FSQueuingScrollViewDelegates.swift */; };
+		8641B0681FBDEDB4A1CDE940315594C2 /* FSPageTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBF53BFB4A40D672284C8B0E86BBEA8 /* FSPageTitle.swift */; };
+		8FCAA1B21548044313F3D421DD33CDF5 /* _FSPagingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F516A853401C46FD0C6485AD22423F /* _FSPagingManager.swift */; };
+		9328AE45B3999A367C7A5AC06A7FC75D /* _FSQueuingScrollViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C5F9BD2804DA5E1CDCD67298935DE /* _FSQueuingScrollViewDataSource.swift */; };
+		968037B19F786155824CD80A0458DCD3 /* FSPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D9560FDDDF06D12D02374362C4C72 /* FSPageTitleView.swift */; };
+		98314DBEEDC392FA43045D4CDDF40575 /* FSPagingViewControllerPageScrollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA84A1FFADA4F1F9F43C408326C297 /* FSPagingViewControllerPageScrollable.swift */; };
+		A4265B6FD22A4A80FB19EEE0C1D68B63 /* _FSQueuingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20F75F90E911EEA072080029B1975E /* _FSQueuingScrollView.swift */; };
+		A595BF71E5F10DF118986E1494A5C341 /* FSPagingKitNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9154F85CF95547290EE0D9393F074 /* FSPagingKitNamespace.swift */; };
+		A66B62E68F35CBDACFEADE124F21773F /* FSPageViewControllerGestureRecognizerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F819D0ADDEDE0A23B06E3911CB5AA15 /* FSPageViewControllerGestureRecognizerDelegate.swift */; };
+		BDA23EC1587E1AC9B6AB57E3B1BF3A24 /* FSPagingKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9D19E7A0ECBE9989AA4D1872B86161 /* FSPagingKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD55C3AAADAA0F3456904034308BC1FF /* FSPageTextTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B401C44078A16A2C7C675D15458C1 /* FSPageTextTitle.swift */; };
+		DD995A15A1CFE2E0A182E2BA78C03821 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF4CA3AF5536D14B4E015504E7AEEC0 /* UIKit.framework */; };
+		E4856B7273534A67244F9AD7DFDE48BC /* FSPageTitlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BE1613A623B696B4A94BC14A02E48C /* FSPageTitlesView.swift */; };
+		ECA5E6E4A064C79284817B586FC229F3 /* FSPageScaleTextTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E319FD7D4FD1272703E4EF358A5A9B /* FSPageScaleTextTitleView.swift */; };
+		F248927EE6955AABDFFD72E719D92913 /* FSPagingConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7CB228E25A9821EE03FB4D6D1A29D2 /* FSPagingConfig.swift */; };
+		FBDB8FCDBBB5195089EBD01403B94804 /* FSPageViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4FBA185B8D34AEA0FFF2AEE9A8849 /* FSPageViewControllerDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0CD1602707BB76F89493F9A11BF5CB2E /* PBXContainerItemProxy */ = {
+		5EB57AAA6A93CB788D20E372A138B497 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -67,6 +67,7 @@
 		6D2111DEA4D88F5381B3CFE82086F291 /* FSPageCrossfadeTextTitleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPageCrossfadeTextTitleView.swift; sourceTree = "<group>"; };
 		7C337A9FCA284E49BB08F825CF608E38 /* Pods-FSPagingKit_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-FSPagingKit_Example"; path = Pods_FSPagingKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEA84A1FFADA4F1F9F43C408326C297 /* FSPagingViewControllerPageScrollable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPagingViewControllerPageScrollable.swift; sourceTree = "<group>"; };
+		8193349D819536E58C58A34C1B7DF545 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		84AF5BBF7F1BA36B85226A09319BBE17 /* UIViewController+Paging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+Paging.swift"; sourceTree = "<group>"; };
 		8E59072B675DC8C24B105B03B4D9068B /* Pods-FSPagingKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FSPagingKit_Example-Info.plist"; sourceTree = "<group>"; };
 		910CA59B3BE05165931E547385CD0AC0 /* Pods-FSPagingKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FSPagingKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,13 +86,12 @@
 		C73609CAE7A87B345DACC30F99EF9357 /* FSPageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPageViewController.swift; sourceTree = "<group>"; };
 		CD1B401C44078A16A2C7C675D15458C1 /* FSPageTextTitle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPageTextTitle.swift; sourceTree = "<group>"; };
 		D0F645CAB220A7C7A5A30B56E5B1318A /* FSPagingKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSPagingKit-prefix.pch"; sourceTree = "<group>"; };
-		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D346E7BA7666CB095974C87935DB99F7 /* FSPagingViewControllerDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FSPagingViewControllerDataSource.swift; sourceTree = "<group>"; };
 		D79F3B88230C3E974678528C9F00B516 /* Pods-FSPagingKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FSPagingKit_Example.modulemap"; sourceTree = "<group>"; };
 		D89C5C17E63C827450BA04B2E8DCE4D3 /* FSPagingKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSPagingKit-dummy.m"; sourceTree = "<group>"; };
 		E52C5F9BD2804DA5E1CDCD67298935DE /* _FSQueuingScrollViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = _FSQueuingScrollViewDataSource.swift; sourceTree = "<group>"; };
 		E9414559DDD1BF16DF7F96CD93EF2F10 /* Pods-FSPagingKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FSPagingKit_Example-umbrella.h"; sourceTree = "<group>"; };
-		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		ECF4CA3AF5536D14B4E015504E7AEEC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		EE216BA375C9B03C28E9EF5D49787037 /* _FSPagingNestedScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = _FSPagingNestedScrollView.swift; sourceTree = "<group>"; };
 		EF8A07DB7458D2F419D3CAC42210FA13 /* Pods-FSPagingKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FSPagingKit_Example-dummy.m"; sourceTree = "<group>"; };
 		F10802B7DB68DC7F5C40FFF374D1E264 /* Pods-FSPagingKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FSPagingKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -100,20 +100,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1F2327EE6B8D136865B2F8B421D714E0 /* Frameworks */ = {
+		4DB6985B0F442AF7C37A1524F2A576AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3514ACC19705A01338C2C72969FBCD97 /* Foundation.framework in Frameworks */,
+				2F3A10FF6046B975D2334487F2476B41 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4CBCA531622CD2229F971D06A2EECCC4 /* Frameworks */ = {
+		C42E4E557C2622B1EE32E3DD7C3F7CF9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AB4115AF056811388219209035E0E68 /* Foundation.framework in Frameworks */,
-				D51B8D33531C563F8B7F35095D513CC0 /* UIKit.framework in Frameworks */,
+				525D624781B273AAF74E6B15907D0C60 /* Foundation.framework in Frameworks */,
+				DD995A15A1CFE2E0A182E2BA78C03821 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +145,7 @@
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
+				1DE6440B6853131A80C53DDA34375AAB /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,6 +157,15 @@
 			);
 			name = Extensions;
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1DE6440B6853131A80C53DDA34375AAB /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8193349D819536E58C58A34C1B7DF545 /* Foundation.framework */,
+				ECF4CA3AF5536D14B4E015504E7AEEC0 /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		21A47427F5CF7485F5859D347153AA70 /* FSPageTitleView */ = {
@@ -204,15 +213,6 @@
 			);
 			name = _FSQueuingScrollView;
 			path = FSPagingKit/Classes/_FSQueuingScrollView;
-			sourceTree = "<group>";
-		};
-		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
-				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		61745C301E4E8BF1698DA67F3F50C444 /* FSPagingConfig */ = {
@@ -350,19 +350,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0236F23974E3504175772D1A00EF0EF2 /* Headers */ = {
+		A9A5BDDA3924E9C28347C8344CF1B5A5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F04A299FA763E71ED953C3D8CE7EBD2 /* Pods-FSPagingKit_Example-umbrella.h in Headers */,
+				BDA23EC1587E1AC9B6AB57E3B1BF3A24 /* FSPagingKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3B68E11F7AD8E9DAF3DA01047EC5600 /* Headers */ = {
+		ED9825DEA16F242BEBEB0E401A2A6AE1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF8F00D2592259C431216C2411180EC6 /* FSPagingKit-umbrella.h in Headers */,
+				22C3411B1A9D66E0F0574A753B325294 /* Pods-FSPagingKit_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,17 +371,17 @@
 /* Begin PBXNativeTarget section */
 		D4136F7CF2EC183802822469AD8FE067 /* Pods-FSPagingKit_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E325336DC8E7DE68935FEA5B140B94FC /* Build configuration list for PBXNativeTarget "Pods-FSPagingKit_Example" */;
+			buildConfigurationList = 0840DE27AED1D12FFF133ED6F19D06CE /* Build configuration list for PBXNativeTarget "Pods-FSPagingKit_Example" */;
 			buildPhases = (
-				0236F23974E3504175772D1A00EF0EF2 /* Headers */,
-				FA4291F6D82D74894D8BF4933449B933 /* Sources */,
-				1F2327EE6B8D136865B2F8B421D714E0 /* Frameworks */,
-				509CCD33D12C23AE5D1D376BED2BA371 /* Resources */,
+				ED9825DEA16F242BEBEB0E401A2A6AE1 /* Headers */,
+				C6C7C37C6D0772BB21705C40936FC5FD /* Sources */,
+				4DB6985B0F442AF7C37A1524F2A576AD /* Frameworks */,
+				21D9E3D68E62CC035E50ECF2ED92C1C6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2524AE5116E31A783AA04321F546EF9E /* PBXTargetDependency */,
+				F1E882E7E6B65B0C7F73D4EF35BFFCED /* PBXTargetDependency */,
 			);
 			name = "Pods-FSPagingKit_Example";
 			productName = Pods_FSPagingKit_Example;
@@ -390,12 +390,12 @@
 		};
 		F61D03F2AEFDA96B84FCBE9BB276C09F /* FSPagingKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB58CEB8F19FB68232190D90DE5E2681 /* Build configuration list for PBXNativeTarget "FSPagingKit" */;
+			buildConfigurationList = 6F250981E0C51171DC60C119181A33E4 /* Build configuration list for PBXNativeTarget "FSPagingKit" */;
 			buildPhases = (
-				F3B68E11F7AD8E9DAF3DA01047EC5600 /* Headers */,
-				890EA66BEA17613394C9BEB31DADFE43 /* Sources */,
-				4CBCA531622CD2229F971D06A2EECCC4 /* Frameworks */,
-				C4066A7EE5D44A80796B2CEAD79E488C /* Resources */,
+				A9A5BDDA3924E9C28347C8344CF1B5A5 /* Headers */,
+				1C6B814B88CF71279823A87F6A62A05A /* Sources */,
+				C42E4E557C2622B1EE32E3DD7C3F7CF9 /* Frameworks */,
+				5F51FDC1FD772AEEE67C6E352CBCBAB9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -412,8 +412,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = VincentLee;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
@@ -425,6 +425,8 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 440D8D11E6DBE303FFE08B9FEB8AE2AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -436,14 +438,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		509CCD33D12C23AE5D1D376BED2BA371 /* Resources */ = {
+		21D9E3D68E62CC035E50ECF2ED92C1C6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4066A7EE5D44A80796B2CEAD79E488C /* Resources */ = {
+		5F51FDC1FD772AEEE67C6E352CBCBAB9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,60 +455,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		890EA66BEA17613394C9BEB31DADFE43 /* Sources */ = {
+		1C6B814B88CF71279823A87F6A62A05A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				361DD62B6B2F15D889BC05F8859C38E9 /* _FSPagingManager.swift in Sources */,
-				12A0EB84FA1F3C3620FBBC5E8C1DFDCC /* _FSPagingNestedScrollView.swift in Sources */,
-				9D7F6642AF9FAB5B29B352F88F98CC5F /* _FSQueuingScrollView.swift in Sources */,
-				65B713B194BD9763E62016AA289DE1EA /* _FSQueuingScrollViewDataSource.swift in Sources */,
-				DFB1CD0FCBCCB91778CB4BE7C87B7F57 /* _FSQueuingScrollViewDelegates.swift in Sources */,
-				742C23BF9F0517B6DBB9ED4AC674C801 /* FSPageCrossfadeTextTitleView.swift in Sources */,
-				F887A88B06AD4F98BDAC1B2DF51D8656 /* FSPageScaleTextTitleView.swift in Sources */,
-				F0E0168DAB406342F2373043056D9968 /* FSPageTextTitle.swift in Sources */,
-				56EA3CE28D3B42B1DC0E306EE7474075 /* FSPageTitle.swift in Sources */,
-				6E4A2C289FF07B032505E8DC1ED46D3D /* FSPageTitlesIndicatorView.swift in Sources */,
-				BAB39C833C7F452B8CCFB59C5DEA511D /* FSPageTitlesView.swift in Sources */,
-				60F79023D4CB3C79068588EC1D7AEF66 /* FSPageTitleView.swift in Sources */,
-				630C97F96A4D13477790843297055BE3 /* FSPageViewController.swift in Sources */,
-				57D4C95A2472C946CFC9A770819FC6FD /* FSPageViewControllerDataSource.swift in Sources */,
-				AC5BF0A3447DB431F1DD29D14AFDBAC6 /* FSPageViewControllerDelegate.swift in Sources */,
-				CE274E42C8144E4B5E652C64794619E1 /* FSPageViewControllerGestureRecognizerDelegate.swift in Sources */,
-				EA259AEB90FF6FF770374586DB4908AA /* FSPagingConfig.swift in Sources */,
-				902FE527B657CF6BDEA48347741E3FA8 /* FSPagingKit-dummy.m in Sources */,
-				F61B10038ADD011F44E8116EC4727645 /* FSPagingKitNamespace.swift in Sources */,
-				CCF19FAF3D4B906C20F21C2D652F4A42 /* FSPagingViewController.swift in Sources */,
-				EB6E8C34E38FD2189DEBA6C61CC8D94A /* FSPagingViewControllerDataSource.swift in Sources */,
-				51303DF2129CE6AE2A16F9F57FA07B27 /* FSPagingViewControllerDelegate.swift in Sources */,
-				32B889EFD4072A93312F6198CA4BCF2D /* FSPagingViewControllerPageScrollable.swift in Sources */,
-				65DBDDB69559B522463A2A1FEB9CAFE7 /* UIViewController+Paging.swift in Sources */,
+				8FCAA1B21548044313F3D421DD33CDF5 /* _FSPagingManager.swift in Sources */,
+				7518833B511B2552221E48205478E0E2 /* _FSPagingNestedScrollView.swift in Sources */,
+				A4265B6FD22A4A80FB19EEE0C1D68B63 /* _FSQueuingScrollView.swift in Sources */,
+				9328AE45B3999A367C7A5AC06A7FC75D /* _FSQueuingScrollViewDataSource.swift in Sources */,
+				7F30F2040234F4454375332398A10621 /* _FSQueuingScrollViewDelegates.swift in Sources */,
+				2CE1F3EE430BC09E144B63A46FFF5FB4 /* FSPageCrossfadeTextTitleView.swift in Sources */,
+				ECA5E6E4A064C79284817B586FC229F3 /* FSPageScaleTextTitleView.swift in Sources */,
+				CD55C3AAADAA0F3456904034308BC1FF /* FSPageTextTitle.swift in Sources */,
+				8641B0681FBDEDB4A1CDE940315594C2 /* FSPageTitle.swift in Sources */,
+				66368F6D744F12F2140A7460680584F1 /* FSPageTitlesIndicatorView.swift in Sources */,
+				E4856B7273534A67244F9AD7DFDE48BC /* FSPageTitlesView.swift in Sources */,
+				968037B19F786155824CD80A0458DCD3 /* FSPageTitleView.swift in Sources */,
+				69B1D2854988A956A2B555DCCA51D26C /* FSPageViewController.swift in Sources */,
+				FBDB8FCDBBB5195089EBD01403B94804 /* FSPageViewControllerDataSource.swift in Sources */,
+				6C6476DB89475BC5C7118353F79CB633 /* FSPageViewControllerDelegate.swift in Sources */,
+				A66B62E68F35CBDACFEADE124F21773F /* FSPageViewControllerGestureRecognizerDelegate.swift in Sources */,
+				F248927EE6955AABDFFD72E719D92913 /* FSPagingConfig.swift in Sources */,
+				7A70397FA7CE8D124FEEA7A5D6961EF7 /* FSPagingKit-dummy.m in Sources */,
+				A595BF71E5F10DF118986E1494A5C341 /* FSPagingKitNamespace.swift in Sources */,
+				732B03B67AF828281E5BF21F68F22322 /* FSPagingViewController.swift in Sources */,
+				37B02A1C1E956B7F0D6DB174771A0AB3 /* FSPagingViewControllerDataSource.swift in Sources */,
+				497182C459CC30FE7246E2332C65387C /* FSPagingViewControllerDelegate.swift in Sources */,
+				98314DBEEDC392FA43045D4CDDF40575 /* FSPagingViewControllerPageScrollable.swift in Sources */,
+				186795F31883A33C16C1577774F1B22D /* UIViewController+Paging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA4291F6D82D74894D8BF4933449B933 /* Sources */ = {
+		C6C7C37C6D0772BB21705C40936FC5FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE853E0C167B6478BE792A88CE517574 /* Pods-FSPagingKit_Example-dummy.m in Sources */,
+				05807D61C25DDBBDFE041EB78845E75E /* Pods-FSPagingKit_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2524AE5116E31A783AA04321F546EF9E /* PBXTargetDependency */ = {
+		F1E882E7E6B65B0C7F73D4EF35BFFCED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FSPagingKit;
 			target = F61D03F2AEFDA96B84FCBE9BB276C09F /* FSPagingKit */;
-			targetProxy = 0CD1602707BB76F89493F9A11BF5CB2E /* PBXContainerItemProxy */;
+			targetProxy = 5EB57AAA6A93CB788D20E372A138B497 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1161DCD94A381BD11E2B7A5500C6B146 /* Release */ = {
+		4860C2D8CCCA5FCCE2B730F26675DB1D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E800B6C93E9B1FB720C6E3D85D5D3B9 /* FSPagingKit.release.xcconfig */;
+			baseConfigurationReference = 56C8348CDD257BC5E3E8B7C6DDFCF3FE /* FSPagingKit.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -521,10 +523,13 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "Target Support Files/FSPagingKit/FSPagingKit-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "Target Support Files/FSPagingKit/FSPagingKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FSPagingKit/FSPagingKit.modulemap";
 				PRODUCT_MODULE_NAME = FSPagingKit;
@@ -532,7 +537,47 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6C59C9AAC9C7C46E4153246A3E7A4BBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 357586C70296664F20DA8605828FA356 /* Pods-FSPagingKit_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-FSPagingKit_Example/Pods-FSPagingKit_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FSPagingKit_Example/Pods-FSPagingKit_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -540,7 +585,7 @@
 			};
 			name = Release;
 		};
-		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -593,7 +638,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -606,7 +651,7 @@
 			};
 			name = Debug;
 		};
-		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -656,7 +701,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -668,47 +713,9 @@
 			};
 			name = Release;
 		};
-		722B151389D8CF7D9671FA9784A9787C /* Release */ = {
+		F012DF88E837E0FEAD787700BE22E296 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 357586C70296664F20DA8605828FA356 /* Pods-FSPagingKit_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGN_IDENTITY = "Don't Code Sign";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-FSPagingKit_Example/Pods-FSPagingKit_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FSPagingKit_Example/Pods-FSPagingKit_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		750C6D3AC66FCA28F6F838583A23F7A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56C8348CDD257BC5E3E8B7C6DDFCF3FE /* FSPagingKit.debug.xcconfig */;
+			baseConfigurationReference = 2E800B6C93E9B1FB720C6E3D85D5D3B9 /* FSPagingKit.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -723,10 +730,13 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "Target Support Files/FSPagingKit/FSPagingKit-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "Target Support Files/FSPagingKit/FSPagingKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FSPagingKit/FSPagingKit.modulemap";
 				PRODUCT_MODULE_NAME = FSPagingKit;
@@ -734,14 +744,16 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_VERSION = 5;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		86F205FFD4831409BD5162D0C429DA1F /* Debug */ = {
+		FAD8736DC0DA78EDE5067D4A76989B19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 910CA59B3BE05165931E547385CD0AC0 /* Pods-FSPagingKit_Example.debug.xcconfig */;
 			buildSettings = {
@@ -759,9 +771,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = "Target Support Files/Pods-FSPagingKit_Example/Pods-FSPagingKit_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FSPagingKit_Example/Pods-FSPagingKit_Example.modulemap";
@@ -781,29 +795,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0840DE27AED1D12FFF133ED6F19D06CE /* Build configuration list for PBXNativeTarget "Pods-FSPagingKit_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD8736DC0DA78EDE5067D4A76989B19 /* Debug */,
+				6C59C9AAC9C7C46E4153246A3E7A4BBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
-				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB58CEB8F19FB68232190D90DE5E2681 /* Build configuration list for PBXNativeTarget "FSPagingKit" */ = {
+		6F250981E0C51171DC60C119181A33E4 /* Build configuration list for PBXNativeTarget "FSPagingKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				750C6D3AC66FCA28F6F838583A23F7A4 /* Debug */,
-				1161DCD94A381BD11E2B7A5500C6B146 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E325336DC8E7DE68935FEA5B140B94FC /* Build configuration list for PBXNativeTarget "Pods-FSPagingKit_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				86F205FFD4831409BD5162D0C429DA1F /* Debug */,
-				722B151389D8CF7D9671FA9784A9787C /* Release */,
+				4860C2D8CCCA5FCCE2B730F26675DB1D /* Debug */,
+				F012DF88E837E0FEAD787700BE22E296 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

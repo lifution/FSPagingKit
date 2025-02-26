@@ -2,7 +2,7 @@
 
 ## Requirements
 
-iOS 11+
+iOS 13+
 Swift 5
 Xcode 14+
 

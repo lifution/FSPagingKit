@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Combine
 
 final class _FSPagingManager: NSObject {
     
@@ -94,11 +95,16 @@ final class _FSPagingManager: NSObject {
     
     private var parentScrollDirection: _ScrollDirection = .stop
     
+    private var cancellables = Set<AnyCancellable>()
+    
     // MARK: Initialization
     
     override init() {
         super.init()
         parentScrollView.delegate = self
+        parentScrollView.backgroundColorPublisher.sink { [weak self] color in
+            self?.pageViewController.view.backgroundColor = color
+        }.store(in: &cancellables)
         pageViewController.delegate = self
         pageViewController.dataSource = self
         pageViewController.gestureRecognizerDelegate = self
