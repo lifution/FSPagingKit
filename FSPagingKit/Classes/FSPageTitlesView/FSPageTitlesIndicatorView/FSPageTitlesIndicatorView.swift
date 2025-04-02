@@ -11,13 +11,10 @@ import UIKit
 /// 用于 FSPageTitlesView 的指示器控件。
 public final class FSPageTitlesIndicatorView: UIView {
     
-    // MARK: 指示器样式。
     public enum Style {
         case bar
         case custom
     }
-    
-    // MARK: Properties/Public
     
     public var style: FSPageTitlesIndicatorView.Style = .bar {
         didSet {
@@ -27,18 +24,14 @@ public final class FSPageTitlesIndicatorView: UIView {
         }
     }
     
-    /// 当 style 为 bar 时的指示器颜色。
+    /// 当 ``style`` 为 ``.bar`` 时的指示器颜色。
     public var barColor: UIColor? = .init(red:0.13, green:0.44, blue:0.88, alpha:1.00) {
         didSet {
             bar?.backgroundColor = barColor
         }
     }
     
-    // MARK: Properties/Private
-    
     private var bar: UIView?
-    
-    // MARK: - Initialization
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -49,11 +42,6 @@ public final class FSPageTitlesIndicatorView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-// MARK: - Override
-
-extension FSPageTitlesIndicatorView {
     
     public override func layoutSubviews() {
         super.layoutSubviews()
@@ -63,24 +51,16 @@ extension FSPageTitlesIndicatorView {
             bar.frame = .init(origin: .init(x: x, y: y), size: Consts.barSize)
         }
     }
-}
-
-// MARK: - Private
-
-private extension FSPageTitlesIndicatorView {
     
-    /// Invoked after initialization.
-    func p_didInitialize() {
+    private func p_didInitialize() {
         p_updateStyle()
     }
     
-    func p_updateStyle() {
-        
+    private func p_updateStyle() {
         if style == .custom {
             bar?.removeFromSuperview()
             bar = nil
         }
-        
         if style == .bar {
             if bar == nil {
                 let bar = UIView()
@@ -94,7 +74,8 @@ private extension FSPageTitlesIndicatorView {
     }
 }
 
-// MARK: - Consts
-private struct Consts {
-    static let barSize = CGSize(width: 28.0, height: 2.0)
+private extension FSPageTitlesIndicatorView {
+    struct Consts {
+        static let barSize = CGSize(width: 28.0, height: 2.0)
+    }
 }
