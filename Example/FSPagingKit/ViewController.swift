@@ -24,6 +24,7 @@ class ViewController: FSPagingViewController {
         do {
             delegate = titlesView
             dataSource = self
+            add(delegate: self)
         }
         do {
             titlesView.titles = ["Latest", "TopList", "Random"].enumerated().compactMap { (_, text) in
@@ -80,6 +81,34 @@ extension ViewController: FSPagingViewControllerDataSource {
     
     func pagingViewController(_ pagingViewController: FSPagingViewController, viewControllerForPageAt index: Int) -> UIViewController {
         return caches[index]
+    }
+}
+
+extension ViewController: FSPagingViewControllerDelegate {
+    
+    func pagingViewControllerWillBeginDragging(_ pagingViewController: FSPagingViewController) {
+        print("view controller: \(#function)")
+    }
+    
+    func pagingViewControllerDidEndDragging(_ pagingViewController: FSPagingViewController) {
+        print("view controller: \(#function)")
+    }
+    
+    func pagingViewController(_ pagingViewController: FSPagingViewController,
+                              willBeginScrollingFrom fromIndex: Int,
+                              to toIndex: Int) {
+        print("view controller: \(#function)")
+    }
+    
+    func pagingViewController(_ pagingViewController: FSPagingViewController,
+                            isScrollingFromIndex fromIndex: Int,
+                            toIndex: Int,
+                            progress: CGFloat) {
+        print("view controller: \(#function)")
+    }
+    
+    func pagingViewController(_ pagingViewController: FSPagingViewController, didFinishScrollingTo index: Int) {
+        print("view controller: \(#function)")
     }
 }
 

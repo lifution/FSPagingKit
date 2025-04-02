@@ -16,9 +16,13 @@ open class FSPagingViewController: UIViewController {
     
     // MARK: Properties/Public
     
+    /// 此处读取的 delegate 是设定的多个 delegate 中的第一个
+    /// 设置该属性会覆盖所有的其它 delegate，效果相当于 ``set(delegate:)``，
+    /// 如果需要添加多 delegate，则需要调用 ``add(delegate:)`` 方法。
+    /// 
     public weak var delegate: FSPagingViewControllerDelegate? {
         get { return manager.pagingDelegate }
-        set { manager.pagingDelegate = newValue }
+        set { manager.set(delegate: newValue) }
     }
     
     public weak var dataSource: FSPagingViewControllerDataSource? {
@@ -204,5 +208,17 @@ public extension FSPagingViewController {
     
     func setNeedsPageScrollableUpdate() {
         manager.setNeedsPageScrollableUpdate()
+    }
+    
+    func set(delegate: (any FSPagingViewControllerDelegate)?) {
+        manager.set(delegate: delegate)
+    }
+    
+    func add(delegate: (any FSPagingViewControllerDelegate)?) {
+        manager.add(delegate: delegate)
+    }
+    
+    func remove(delegate: (any FSPagingViewControllerDelegate)?) {
+        manager.remove(delegate: delegate)
     }
 }

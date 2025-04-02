@@ -13,9 +13,12 @@ final class _FSPagingManager: NSObject {
     
     // MARK: Properties/Internal
     
-    weak var pagingDelegate: FSPagingViewControllerDelegate?
     weak var pagingDataSource: FSPagingViewControllerDataSource?
     weak var pagingViewController: FSPagingViewController!
+    weak var pagingDelegate: FSPagingViewControllerDelegate? {
+        delegates.removeAll(where: { $0.delegate == nil })
+        return delegates.first?.delegate
+    }
     
     let parentScrollView = _FSPagingNestedScrollView()
     
@@ -56,6 +59,8 @@ final class _FSPagingManager: NSObject {
     var shouldRequireFailure: ((_ gestureRecognizer: UIGestureRecognizer, _ otherGestureRecognizer: UIGestureRecognizer) -> Bool)?
     
     // MARK: Properties/Private
+    
+    private var delegates = [DelegateWeaker]()
     
     private var view: UIView {
         return pagingViewController.view!
@@ -448,6 +453,30 @@ extension _FSPagingManager {
         pageViewController.setViewController(viewController, direction: direction, animated: animated)
         p_record(viewController, at: index)
     }
+    
+    func set(delegate: (any FSPagingViewControllerDelegate)?) {
+        delegates.removeAll()
+        if let delegate {
+            delegates.append(.init(delegate: delegate))
+        }
+    }
+    
+    func add(delegate: (any FSPagingViewControllerDelegate)?) {
+        delegates.removeAll(where: { $0.delegate == nil })
+        guard
+            let delegate,
+            !delegates.contains(where: { $0.delegate === delegate })
+        else {
+            return
+        }
+        delegates.append(.init(delegate: delegate))
+    }
+    
+    func remove(delegate: (any FSPagingViewControllerDelegate)?) {
+        delegates.removeAll(where: { $0.delegate == nil })
+        guard let delegate else { return }
+        delegates.removeAll(where: { $0.delegate === delegate })
+    }
 }
 
 // MARK: - UIScrollViewDelegate
@@ -506,11 +535,11 @@ extension _FSPagingManager: FSPageViewControllerDataSource {
 extension _FSPagingManager: FSPageViewControllerDelegate {
     
     func pageViewControllerWillBeginDragging(_ pageViewController: FSPageViewController) {
-        pagingDelegate?.pagingViewControllerWillBeginDragging(pagingViewController)
+        delegates.forEach { $0.delegate?.pagingViewControllerWillBeginDragging(pagingViewController) }
     }
     
     func pageViewControllerDidEndDragging(_ pageViewController: FSPageViewController) {
-        pagingDelegate?.pagingViewControllerDidEndDragging(pagingViewController)
+        delegates.forEach { $0.delegate?.pagingViewControllerDidEndDragging(pagingViewController) }
     }
     
     func pageViewController(_ pageViewController: FSPageViewController,
@@ -520,10 +549,13 @@ extension _FSPagingManager: FSPageViewControllerDelegate {
             let fromIndex = caches.object(forKey: fromViewController)?.page,
             let toIndex = caches.object(forKey: toViewController)?.page
         else {
-            assert(false, "There must be something wrong, right?")
+            #if DEBUG
+            fatalError("There must be something wrong, right?")
+            #else
             return
+            #endif
         }
-        pagingDelegate?.pagingViewController(pagingViewController, willBeginScrollingFrom: fromIndex, to: toIndex)
+        delegates.forEach { $0.delegate?.pagingViewController(pagingViewController, willBeginScrollingFrom: fromIndex, to: toIndex) }
     }
     
     func pageViewController(_ pageViewController: FSPageViewController,
@@ -534,10 +566,13 @@ extension _FSPagingManager: FSPageViewControllerDelegate {
             let fromIndex = caches.object(forKey: fromViewController)?.page,
             let toIndex = caches.object(forKey: toViewController)?.page
         else {
-            assert(false, "There must be something wrong, right?")
+            #if DEBUG
+            fatalError("There must be something wrong, right?")
+            #else
             return
+            #endif
         }
-        pagingDelegate?.pagingViewController(pagingViewController, isScrollingFromIndex: fromIndex, toIndex: toIndex, progress: progress)
+        delegates.forEach { $0.delegate?.pagingViewController(pagingViewController, isScrollingFromIndex: fromIndex, toIndex: toIndex, progress: progress) }
     }
     
     func pageViewController(_ pageViewController: FSPageViewController, didFinishScrollingTo viewController: UIViewController) {
@@ -545,11 +580,14 @@ extension _FSPagingManager: FSPageViewControllerDelegate {
             p_updatePageScrollable()
         }
         guard let pagingIndex = caches.object(forKey: viewController) else {
-            assert(false, "There must be something wrong, right?")
+            #if DEBUG
+            fatalError("There must be something wrong, right?")
+            #else
             return
+            #endif
         }
         currentPage = pagingIndex.page
-        pagingDelegate?.pagingViewController(pagingViewController, didFinishScrollingTo: currentPage)
+        delegates.forEach { $0.delegate?.pagingViewController(pagingViewController, didFinishScrollingTo: currentPage) }
     }
 }
 
@@ -668,18 +706,13 @@ extension _FSPagingManager: FSPageViewControllerGestureRecognizerDelegate {
     }
 }
 
-
-// MARK: - _PagingIndex
 private class _PagingIndex {
-    
     let page: Int
-    
     init(page: Int) {
         self.page = page
     }
 }
 
-// MARK: - _ScrollDirection
 private enum _ScrollDirection {
     /// 内容往上移动
     case up
@@ -689,7 +722,6 @@ private enum _ScrollDirection {
     case stop
 }
 
-// MARK: - UIViewController Extension
 extension UIViewController {
     
     /// 查找当前 UIViewController 所在的 FSPageViewController（不包含当前 viewController）。
@@ -701,5 +733,12 @@ extension UIViewController {
             return parent
         }
         return parent.p_pageViewController
+    }
+}
+
+private final class DelegateWeaker {
+    weak var delegate: (any FSPagingViewControllerDelegate)?
+    init(delegate: (any FSPagingViewControllerDelegate)?) {
+        self.delegate = delegate
     }
 }
