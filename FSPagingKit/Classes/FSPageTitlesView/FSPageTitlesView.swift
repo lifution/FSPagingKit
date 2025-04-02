@@ -81,6 +81,22 @@ open class FSPageTitlesView: UIScrollView {
     ///
     public let indicatorView = FSPageTitlesIndicatorView()
     
+    /// 当 titles 超出 ``bounds.size`` 的时候，是否允许开启 ``bounces`` 效果，
+    /// 在某些场景下，外部可能会希望彻底关闭 ``bounces`` 效果，那么就可以通过该
+    /// 属性来彻底关闭 ``bounces`` 效果。
+    ///
+    /// 默认为 true
+    ///
+    public var isBounceEnabled = true {
+        didSet {
+            if isBounceEnabled {
+                bounces = contentSize.width > viewSize.width
+            } else {
+                bounces = false
+            }
+        }
+    }
+    
     // MARK: Properties/Private
     
     private var viewSize = CGSize.zero
@@ -215,7 +231,9 @@ private extension FSPageTitlesView {
     func p_updateTitlesLayout() {
         
         defer {
-            bounces = contentSize.width > viewSize.width
+            if isBounceEnabled {
+                bounces = contentSize.width > viewSize.width
+            }
             p_updateIndicator()
         }
         
