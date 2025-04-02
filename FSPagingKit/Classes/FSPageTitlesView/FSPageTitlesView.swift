@@ -418,7 +418,6 @@ public extension FSPageTitlesView {
     ///   * 如果 index 超出 titles 的范围，调用该方法同样无效。
     ///
     func selectTitle(at index: Int, animated: Bool = false) {
-        
         guard
             let titles = titles,
             !titles.isEmpty,
@@ -426,6 +425,13 @@ public extension FSPageTitlesView {
             index < titles.count
         else {
             return
+        }
+        
+        var animated = animated
+        
+        if indexForSelectedTitle == nil {
+            // 从「未选中」变成「选中」，不需要动画
+            animated = false
         }
         
         indexForSelectedTitle = index
@@ -461,5 +467,12 @@ public extension FSPageTitlesView {
     /// 设置纯文本标题，FSPageTitlesView 内部会自动转化为 titles。
     func setTitles(with texts: [String]?) {
         titles = texts?.compactMap { FSPageTextTitle(text: $0) } ?? []
+    }
+    
+    /// 重置选中状态，即全部 title 都恢复为未选中状态
+    ///
+    func resetSelectionState() {
+        indexForSelectedTitle = nil
+        p_reload()
     }
 }
