@@ -13,6 +13,8 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		BFD44C432DA7CD6700B9FE70 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD44C422DA7CD6700B9FE70 /* DemoViewController.swift */; };
+		BFD44C452DA7D28600B9FE70 /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD44C442DA7D28600B9FE70 /* TagViewController.swift */; };
 		CA7A47F07CE3A64E4B7CF5AB /* Pods_FSPagingKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFE6D9CA4F582378880A341 /* Pods_FSPagingKit_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		84689718083816318DABCFD7 /* Pods_FSPagingKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FSPagingKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		854DB3DC49E1400BA8C6B875 /* Pods-FSPagingKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSPagingKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-FSPagingKit_Tests/Pods-FSPagingKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8CE6A73AE5BE10DC5CCB5CCE /* FSPagingKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FSPagingKit.podspec; path = ../FSPagingKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BFD44C422DA7CD6700B9FE70 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		BFD44C442DA7D28600B9FE70 /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 		C9AB43EF777DB040AAC9C4A7 /* Pods-FSPagingKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSPagingKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-FSPagingKit_Tests/Pods-FSPagingKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D92ECF3454CFEA38D878B2E9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		EE067E58B0742360DB16107A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				0494FD582AF4E76E00785E50 /* TableViewController.swift */,
+				BFD44C422DA7CD6700B9FE70 /* DemoViewController.swift */,
+				BFD44C442DA7D28600B9FE70 /* TagViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -200,10 +206,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FSPagingKit_Example/Pods-FSPagingKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FSPagingKit/FSPagingKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagingKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -241,7 +249,9 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				0494FD592AF4E76E00785E50 /* TableViewController.swift in Sources */,
+				BFD44C452DA7D28600B9FE70 /* TagViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				BFD44C432DA7CD6700B9FE70 /* DemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

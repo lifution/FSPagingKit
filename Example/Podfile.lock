@@ -1,16 +1,23 @@
 PODS:
-  - FSPagingKit (1.0.2)
+  - FSPagingKit (1.0.4)
+  - SnapKit (5.7.1)
 
 DEPENDENCIES:
   - FSPagingKit (from `../`)
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
 
 EXTERNAL SOURCES:
   FSPagingKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FSPagingKit: 98893e5d809991f1305c5d2b56b9c2bb73ec665b
+  FSPagingKit: 9e3642d33c7465b4e87e0c58588f9986d955ff8f
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: 66a23b9803032720f44d5b043df311992c6c66a7
+PODFILE CHECKSUM: f6434534d347eb2e128197ff25ec9625d8988945
 
 COCOAPODS: 1.16.2

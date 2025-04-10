@@ -102,6 +102,10 @@ final class _FSPagingManager: NSObject {
     
     private var cancellables = Set<AnyCancellable>()
     
+    private var isRTL: Bool {
+        view.semanticContentAttribute == .forceRightToLeft
+    }
+    
     // MARK: Initialization
     
     override init() {
@@ -378,8 +382,10 @@ extension _FSPagingManager {
     
     func viewDidLayoutSubviews() {
         defer {
-            reloadIfNeeded()
-            p_updateLayoutIfNeeded()
+            DispatchQueue.main.async {
+                self.reloadIfNeeded()
+                self.p_updateLayoutIfNeeded()
+            }
         }
         if viewSize != view.bounds.size {
             viewSize = view.bounds.size
@@ -416,9 +422,7 @@ extension _FSPagingManager {
             return
         }
         
-        numberOfPages = source.numberOfPages(in: pagingViewController)
-        numberOfPages = max(0, numberOfPages)
-        
+        numberOfPages = max(0, source.numberOfPages(in: pagingViewController))
         if numberOfPages == 0 {
             return
         }
@@ -427,15 +431,15 @@ extension _FSPagingManager {
         if index < 0 || index >= numberOfPages {
             index = 0
         }
-        
         currentPage = index
+        
         let viewController = source.pagingViewController(pagingViewController, viewControllerForPageAt: index)
         p_record(viewController, at: index)
         pageViewController.setViewController(viewController, direction: .forward, animated: false)
     }
     
     func removeAll() {
-        pageViewController.setViewController(nil, direction: .forward, animated: false)
+        pageViewController.removeAll()
         p_reset()
     }
     
@@ -449,7 +453,12 @@ extension _FSPagingManager {
             return
         }
         let viewController = source.pagingViewController(pagingViewController, viewControllerForPageAt: index)
-        let direction: FSPageViewController.NavigationDirection = index > currentPage ? .forward : .reverse
+        let direction: FSPageViewController.NavigationDirection = {
+            if self.isRTL {
+                return index > currentPage ? .reverse : .forward
+            }
+            return index > currentPage ? .forward : .reverse
+        }()
         pageViewController.setViewController(viewController, direction: direction, animated: animated)
         p_record(viewController, at: index)
     }
@@ -498,13 +507,33 @@ extension _FSPagingManager: UIScrollViewDelegate {
 extension _FSPagingManager: FSPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: FSPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        if isRTL {
+            return p_pageViewController(pageViewController, viewControllerAfter: viewController)
+        }
+        return p_pageViewController(pageViewController, viewControllerBefore: viewController)
+    }
+    
+    func pageViewController(_ pageViewController: FSPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        if isRTL {
+            return p_pageViewController(pageViewController, viewControllerBefore: viewController)
+        }
+        return p_pageViewController(pageViewController, viewControllerAfter: viewController)
+    }
+}
+
+private extension _FSPagingManager {
+    
+    func p_pageViewController(
+        _ pageViewController: FSPageViewController,
+        viewControllerBefore viewController: UIViewController
+    ) -> UIViewController? {
         guard let pagingIndex = caches.object(forKey: viewController) else { return nil }
         var nextIndex = pagingIndex.page - 1
         if nextIndex < 0 {
-            if !isInfinite {
+            if numberOfPages <= 1 || !isInfinite {
                 return nil
             }
-            nextIndex = numberOfPages - 1 // 循环，跳到最后一页。
+            nextIndex = numberOfPages - 1 // 循环，跳到最后一页
         }
         let vc = pagingDataSource?.pagingViewController(pagingViewController, viewControllerForPageAt: nextIndex)
         if let vc = vc {
@@ -513,14 +542,17 @@ extension _FSPagingManager: FSPageViewControllerDataSource {
         return vc
     }
     
-    func pageViewController(_ pageViewController: FSPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+    func p_pageViewController(
+        _ pageViewController: FSPageViewController,
+        viewControllerAfter viewController: UIViewController
+    ) -> UIViewController? {
         guard let pagingIndex = caches.object(forKey: viewController) else { return nil }
         var nextIndex = pagingIndex.page + 1
         if nextIndex >= numberOfPages {
-            if !isInfinite {
+            if numberOfPages <= 1 || !isInfinite {
                 return nil
             }
-            nextIndex = 0 // 循环，跳到第一页。
+            nextIndex = 0 // 循环，跳到第一页
         }
         let vc = pagingDataSource?.pagingViewController(pagingViewController, viewControllerForPageAt: nextIndex)
         if let vc = vc {
@@ -644,8 +676,14 @@ extension _FSPagingManager: FSPageViewControllerGestureRecognizerDelegate {
             return true
         }
         if let window = view.window {
-            if gestureRecognizer.location(in: window).x > 44.0 {
-                return false
+            if isRTL {
+                if window.frame.width - gestureRecognizer.location(in: window).x > 30.0 {
+                    return false
+                }
+            } else {
+                if gestureRecognizer.location(in: window).x > 30.0 {
+                    return false
+                }
             }
         } else {
             return false
@@ -681,7 +719,9 @@ extension _FSPagingManager: FSPageViewControllerGestureRecognizerDelegate {
         guard isPagingEnabled else {
             return false
         }
-        
+        if numberOfPages <= 1 {
+            return false
+        }
         if isInfinite {
             return true
         }
@@ -690,13 +730,25 @@ extension _FSPagingManager: FSPageViewControllerGestureRecognizerDelegate {
             if let _ = pagingViewController.p_pageViewController {
                 if let view = panGestureRecognizer.view {
                     let velocity = panGestureRecognizer.velocity(in: view)
-                    if velocity.x > 0.0 {
-                        if currentPage == 0 {
-                            return false
+                    if isRTL {
+                        if velocity.x > 0.0 {
+                            if currentPage == numberOfPages - 1 {
+                                return false
+                            }
+                        } else if velocity.x < 0.0 {
+                            if currentPage == 0 {
+                                return false
+                            }
                         }
-                    } else if velocity.x < 0.0 {
-                        if currentPage == numberOfPages - 1 {
-                            return false
+                    } else {
+                        if velocity.x > 0.0 {
+                            if currentPage == 0 {
+                                return false
+                            }
+                        } else if velocity.x < 0.0 {
+                            if currentPage == numberOfPages - 1 {
+                                return false
+                            }
                         }
                     }
                 }

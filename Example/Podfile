@@ -3,6 +3,7 @@ platform :ios, '13.0'
 
 target 'FSPagingKit_Example' do
   pod 'FSPagingKit', :path => '../'
+  pod 'SnapKit'
 end
 
 post_install do |installer|

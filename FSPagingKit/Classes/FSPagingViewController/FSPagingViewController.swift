@@ -15,74 +15,84 @@ import UIKit
 open class FSPagingViewController: UIViewController {
     
     // MARK: Properties/Public
-    
+    ///
     /// 此处读取的 delegate 是设定的多个 delegate 中的第一个
     /// 设置该属性会覆盖所有的其它 delegate，效果相当于 ``set(delegate:)``，
     /// 如果需要添加多 delegate，则需要调用 ``add(delegate:)`` 方法。
     /// 
-    public weak var delegate: FSPagingViewControllerDelegate? {
+    public final weak var delegate: FSPagingViewControllerDelegate? {
         get { return manager.pagingDelegate }
         set { manager.set(delegate: newValue) }
     }
-    
-    public weak var dataSource: FSPagingViewControllerDataSource? {
+    ///
+    /// 数据源
+    ///
+    public final weak var dataSource: FSPagingViewControllerDataSource? {
         get { return manager.pagingDataSource }
         set { manager.pagingDataSource = newValue }
     }
-    
+    ///
     /// 头部高度。
     /// 可在该区域放置 titlesView 等控件。
-    public var headerHeight: CGFloat {
+    ///
+    public final var headerHeight: CGFloat {
         get { return manager.headerHeight }
         set { manager.headerHeight = newValue }
     }
-    
+    ///
     /// 悬浮高度。
-    /// 该数值表示的是从当前页面顶部到悬浮位置的距离。 (横向滚动内容顶部到悬浮位置的距离)
-    /// 子vc需要遵循 FSPagingViewControllerPageScrollable 协议才能实现悬浮等效果
-    public var stickyHeight: CGFloat {
+    /// 该数值表示的是从当前页面顶部到悬浮位置的距离 (横向滚动内容顶部到悬浮位置的距离)。
+    /// child view controller 需要遵循 FSPagingViewControllerPageScrollable 协议才能实现悬浮等效果。
+    ///
+    public final var stickyHeight: CGFloat {
         get { return manager.stickyHeight }
         set { manager.stickyHeight = newValue }
     }
-    
+    ///
     /// 内容偏移
     /// page 内容是铺满整个 view controller，但有时候会有需求把 page 偏移一部分，比如
     /// navigation bar 或 tab bar。
     /// 用法类似 UIScrollView 的 contentInset。
     /// 默认为 .zero
-    public var contentInset: UIEdgeInsets {
+    ///
+    public final var contentInset: UIEdgeInsets {
         get { return manager.contentInset }
         set { manager.contentInset = newValue }
     }
-    
+    ///
     /// 是否为循环滑动，默认为 false。
-    public var isInfinite: Bool {
+    ///
+    public final var isInfinite: Bool {
         get { return manager.isInfinite }
         set { manager.isInfinite = newValue }
     }
-    
+    ///
     /// 是否允许滑动翻页，默认为 true。
-    public var isPagingEnabled: Bool {
+    ///
+    public final var isPagingEnabled: Bool {
         get { return manager.isPagingEnabled }
         set { manager.isPagingEnabled = newValue }
     }
-    
+    ///
     /// 是否由子控制器来控制状态栏，比如状态栏的 hidden 或者 style。
-    public var shouldControlStatusBarByChild = true {
+    ///
+    public final var shouldControlStatusBarByChild = true {
         didSet {
             if shouldControlStatusBarByChild != oldValue {
                 setNeedsStatusBarAppearanceUpdate()
             }
         }
     }
-    
+    ///
     /// 与 FSPageViewController 横向滑动手势同步进行的手势集合。
     /// 如果外部有需要与 page 横向 scrollView 同步进行手势可添加到该集合中。
-    public var simultaneouslyGestureRecognizers = [UIGestureRecognizer]()
-    
+    ///
+    public final var simultaneouslyGestureRecognizers = [UIGestureRecognizer]()
+    ///
     /// 容器滚动回调，即最底层的 UIScrollView 滚动回调。
     /// 可实现该 closure 监听容器 scrollView 的滚动，以实现一些效果，比如头部放大、头部渐变等效果。
-    public var onContainerDidScroll: ((CGPoint) -> Void)?
+    ///
+    public final var onContainerDidScroll: ((CGPoint) -> Void)?
     
     // MARK: Properties/Private
     
@@ -122,16 +132,20 @@ open class FSPagingViewController: UIViewController {
         manager.scrollToViewController(at: index, animated: animated)
     }
     
-    open func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
-                                shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    open func gestureRecognizer(
+        _ gestureRecognizer: UIGestureRecognizer,
+        shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer
+    ) -> Bool {
         if simultaneouslyGestureRecognizers.contains(otherGestureRecognizer) {
             return true
         }
         return false
     }
     
-    open func gestureRecognizer(_ pageViewController: UIGestureRecognizer,
-                                shouldRequireFailureOf otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    open func gestureRecognizer(
+        _ pageViewController: UIGestureRecognizer,
+        shouldRequireFailureOf otherGestureRecognizer: UIGestureRecognizer
+    ) -> Bool {
         return false
     }
 }
