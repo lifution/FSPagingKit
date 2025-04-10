@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        UIView.appearance().semanticContentAttribute = .forceRightToLeft
+//        UIView.appearance().semanticContentAttribute = .forceRightToLeft
         return true
     }
 }

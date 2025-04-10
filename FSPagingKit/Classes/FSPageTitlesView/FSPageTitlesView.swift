@@ -15,63 +15,69 @@ import UIKit
 ///   - 每一个 FSPageTitle 都对应一个 FSPageTitleView，而且 FSPageTitleView 不会复用。
 ///
 open class FSPageTitlesView: UIScrollView {
-    
+    ///
     /// 标题布局类型
+    ///
     public enum LayoutType {
+        ///
         /// 外部手动配置宽度
+        ///
         case manually
+        ///
         /// 根据布局空间等宽布局
+        ///
         case equally
     }
     
     // MARK: Properties/Public
-    
+    ///
     /// 标题对象集合。
     ///
     /// - Note:
     ///   * 每次修改该属性后，都会刷新整个 TitlesView。
     ///
-    public var titles: [FSPageTitle]? {
+    public final var titles: [FSPageTitle]? {
         didSet {
             p_setNeedsReload()
         }
     }
-    
+    ///
     /// 选中 titile 的下标，如果没有选中的 title，则返回 nil。
     ///
     /// - Note:
     ///   * 在 titles 更新后，如果 indexForSelectedTitle 还有效则自动设置对应的选中状态，
     ///     否则把 indexForSelectedTitle 重置为 nil。
     ///
-    public private(set) var indexForSelectedTitle: Int?
-    
+    public final private(set) var indexForSelectedTitle: Int?
+    ///
     /// 标题布局类型，默认为 equally。
     ///
     /// * manually: 按照 title 的 width 属性布局。
     /// * equally: 忽略 title 的 width 属性，按照 titles 的数量和当前 titlesView 的宽度等宽布局。
     ///
-    public var layoutType: FSPageTitlesView.LayoutType = .equally {
+    public final var layoutType: FSPageTitlesView.LayoutType = .equally {
         didSet {
             if layoutType != oldValue {
                 p_setNeedsReload()
             }
         }
     }
-    
+    ///
     /// 点击选中处理器。
     ///
     /// - 外部可通过该 closure 控制 PageTitleView 是否被选中。
     /// - 允许点击选中 title 则在该 closure 中返回 true，否则返回 false。
     ///
-    public var selectionHandler: ((_ index: Int) -> Bool)?
-    
+    public final var selectionHandler: ((_ index: Int) -> Bool)?
+    ///
     /// 是否隐藏指示器，默认为 false。
-    public var isIndicatorHidden = false {
+    ///
+    public final var isIndicatorHidden = false {
         didSet {
             p_updateIndicator()
         }
     }
-    
+    ///
     /// indicator。
     ///
     /// - Note:
@@ -79,15 +85,15 @@ open class FSPageTitlesView: UIScrollView {
     ///   - 外部可将自定义的 indicator 添加到该容器上。
     ///   - 默认的指示器样式为 `bar`。
     ///
-    public let indicatorView = FSPageTitlesIndicatorView()
-    
+    public final let indicatorView = FSPageTitlesIndicatorView()
+    ///
     /// 当 titles 超出 ``bounds.size`` 的时候，是否允许开启 ``bounces`` 效果，
     /// 在某些场景下，外部可能会希望彻底关闭 ``bounces`` 效果，那么就可以通过该
     /// 属性来彻底关闭 ``bounces`` 效果。
     ///
     /// 默认为 true
     ///
-    public var isBounceEnabled = true {
+    public final var isBounceEnabled = true {
         didSet {
             if isBounceEnabled {
                 bounces = contentSize.width > viewSize.width
@@ -107,6 +113,10 @@ open class FSPageTitlesView: UIScrollView {
     
     private var selectedTitleView: FSPageTitleView?
     
+    private var isRTL: Bool {
+        semanticContentAttribute == .forceRightToLeft
+    }
+    
     // MARK: Initialization
     
     public override init(frame: CGRect) {
@@ -123,6 +133,14 @@ open class FSPageTitlesView: UIScrollView {
 // MARK: - Override
 
 extension FSPageTitlesView {
+    
+    open override var semanticContentAttribute: UISemanticContentAttribute {
+        didSet {
+            if semanticContentAttribute != oldValue {
+                p_updateTitlesLayout()
+            }
+        }
+    }
     
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
@@ -153,7 +171,9 @@ extension FSPageTitlesView {
             contentSize.height = viewSize.height
             indicatorView.frame.origin.y = 0.0
             indicatorView.frame.size.height = bounds.height
-            p_updateTitlesLayout()
+            DispatchQueue.main.async {
+                self.p_updateTitlesLayout()
+            }
         }
     }
 }
@@ -235,6 +255,17 @@ private extension FSPageTitlesView {
                 bounces = contentSize.width > viewSize.width
             }
             p_updateIndicator()
+            if contentSize.width > frame.width {
+                if let indexForSelectedTitle {
+                    p_centerTitleView(at: indexForSelectedTitle, animated: false)
+                } else {
+                    if isRTL {
+                        contentOffset.x = contentSize.width - frame.width
+                    } else {
+                        contentOffset = .zero
+                    }
+                }
+            }
         }
         
         guard !titleViews.isEmpty else {
@@ -269,6 +300,13 @@ private extension FSPageTitlesView {
             lastTitleView = view
         }
         contentSize.width = lastTitleView!.frame.maxX + lastTitleView!.title.margin.right
+        /// 如果是 RTL 布局，则把所有 titlesView 做一次镜像排列。
+        if isRTL {
+            let width = max(frame.width, contentSize.width)
+            titleViews.forEach {
+                $0.frame.origin.x =  width - $0.frame.minX - $0.frame.width
+            }
+        }
     }
     
     func p_updateIndicator() {
