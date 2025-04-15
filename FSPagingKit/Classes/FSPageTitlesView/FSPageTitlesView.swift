@@ -171,7 +171,7 @@ extension FSPageTitlesView {
             contentSize.height = viewSize.height
             indicatorView.frame.origin.y = 0.0
             indicatorView.frame.size.height = bounds.height
-            DispatchQueue.main.async {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 self.p_updateTitlesLayout()
             }
         }
