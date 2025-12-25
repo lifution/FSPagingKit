@@ -625,7 +625,7 @@ extension _FSQueuingScrollView {
 
 private extension UIView {
     
-    private static var key = "com.sheng.fspagingkit.page.view.state.key"
+    private static var key = 0
     
     enum AppearanceState: Int {
         case unmounted    = 0
